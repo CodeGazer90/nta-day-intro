@@ -4,11 +4,30 @@
     box-sizing: border-box;
 }
 
+body{
+    background: linear-gradient(119deg, rgba(242,80,34,1) 0%, rgba(127,186,0,1) 35%, rgba(0,164,239,1) 100%) rgba(255, 185, 0) 100%;
+}
+
+.microsoft-logo img, .microsoft-logo h3{
+    width: 100px;
+    position: relative;
+    top: 50vh;
+    left:2vw;
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 25px;
+}
+
+.microsoft-logo h3 span{
+    color: #737373;
+}
+
+
 .container{
-    margin: 100px auto;
+    margin: 50px auto;
     perspective: 1000px;
     width:450px ;
     height: 620px;
+    
 }
 
 .card{
@@ -104,3 +123,4 @@ p{
 .front-content .yellow, .back-content .yellow{
     color: #FFB900;
 }
+
