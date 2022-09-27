@@ -17,19 +17,26 @@
     height: 100%;
     transform-style: preserve-3d;
     transition: all .75s ease;
-    background: yellow;
+    /* background: yellow; */
     cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 1);
 }
 
 .face{
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     overflow: hidden;
-    border-radius: 16px;
+    border-radius: 20px;
     box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 1);
+    background-image: url(/images/chalkboard-background.jpg);
+    font-family: 'Cabin Sketch', cursive;
+    /* font-family: 'Caveat', cursive; */
+    /* font-family: 'Fredericka the Great', cursive; */
+    padding: 30px;
+    text-align: center;
 }
 
 .card.is-flipped{
@@ -37,34 +44,63 @@
 }
 
 .front{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    background: gray;
+    /* background: gray; */
     color: white;
-    border-radius: 20px;
     
 }
 
 .back{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    background: blue;
+    /* background: blue; */
     color: white;
     transform: rotateY(180deg);
-    border-radius: 20px;
 }
 
-.front-content{
+.front-content, .back-content{
     display: grid;
-    grid-template-rows: .5fr 1fr 1fr;
+    /* grid-template-rows: .5fr 1fr; */
 }
 
 .front-content img{
     width: 100px;
+    border-radius: 50px;
+    
 }
 
+.front-content h2{
+    font-size:56px;
+    padding: 10px;
+    color: #F25022;
+}
 
+h3{
+    font-size: 30px;
+}
+
+p{
+    font-size: 25px ;
+}
+
+.front-content .hobbies li{
+    list-style: none;
+    font-size: 25px;
+}
+
+.front-content .flip{
+    font-size: 35px;
+    
+}
+
+.front-content .flip:hover{
+    font-size: 40px;
+    
+}
+
+.front-content .blue, .back-content .blue{
+    color: #00A4EF;
+}
+.front-content .green{
+    color: #7FBA00;
+}
+.front-content .yellow, .back-content .yellow{
+    color: #FFB900;
+}
