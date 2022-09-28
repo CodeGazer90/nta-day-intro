@@ -1,7 +1,6 @@
 *{
     margin: 0;
     padding: 0;
-    /* box-sizing: border-box; */
 }
 
 body{
@@ -12,11 +11,10 @@ body{
 
 .microsoft-logo img, .microsoft-logo h3{
     width: 100px;
+    height: 90px;
     position: relative;
-    /* top: 50vh;
-    left:2vw; */
     font-family: 'Cabin Sketch', cursive;
-    font-size: 25px;
+    font-size: 20px;
 
 }
 
@@ -24,17 +22,23 @@ body{
     color: #737373;
 }
 
+.microsoft-logo{
+    display: flex;
+    margin-right: 100px;
+    width: 200px; 
+}
+
+.microsoft-logo h3{
+    margin:0 25px;
+}
 
 .container{
-    /* margin-top: 50px; */
     display: flex;
     justify-content: space-around;
     margin: 100px auto;
     perspective: 1000px;
     width:700px ;
     height: 620px;
-    /* margin-right: 100px; */
-    
 }
 
 .card{
@@ -43,7 +47,6 @@ body{
     height: 520px;
     transform-style: preserve-3d;
     transition: all .75s ease;
-    /* background: yellow; */
     cursor: pointer;
     border-radius: 20px;
     box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 1);
@@ -59,8 +62,6 @@ body{
     box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 1);
     background-image: url(./images/chalkboard-background.jpg);
     font-family: 'Cabin Sketch', cursive;
-    /* font-family: 'Caveat', cursive; */
-    /* font-family: 'Fredericka the Great', cursive; */
     padding: 30px;
     text-align: center;
 }
@@ -70,20 +71,17 @@ body{
 }
 
 .front{
-    /* background: gray; */
     color: white;
     
 }
 
 .back{
-    /* background: blue; */
     color: white;
     transform: rotateY(180deg);
 }
 
 .front-content, .back-content{
     display: grid;
-    /* grid-template-rows: .5fr 1fr; */
 }
 
 .front-content img{
@@ -106,9 +104,19 @@ p{
     font-size: 25px ;
 }
 
-.front-content .hobbies li{
+.front-content .hobbies li, .front-content .hobbies a{
     list-style: none;
     font-size: 25px;
+    color: white;
+    text-decoration: none;
+}
+
+.front-content .hobbies a:hover{
+    font-size: 30px ;
+}
+
+.front-content .hobbies a:visited{
+    color: #7FBA00;
 }
 
 .front-content .flip{
@@ -131,29 +139,36 @@ p{
     color: #FFB900;
 }
 
+.bluee, .yelloww{
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+.back-content span{
+    color: #7FBA00;
+    font-size: 30px;
+}
+
 
 /* small screen */
 
 @media(max-width:800px) { 
     .container{
-        margin: 0 auto 0 20px;
         perspective: 1000px;
-        width:700px ;
-        height: 1500px;
+        height: 1100px;
         display: flex;
         flex-direction: column;
     }
 
     .microsoft-logo{
         display: flex;
-        margin: 0 auto;  
+        margin-left: 125px;
     }
 
     .microsoft-logo h3 span{
         color: #737373;
-
     }
-
+ 
     .microsoft-logo h3 {
         margin-left: 25px;
         width: 200px;
@@ -169,8 +184,7 @@ p{
         cursor: pointer;
         border-radius: 20px;
         box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 1);
-        margin: 0 auto;
-        margin-top: -300px;
+        margin-left: 125px;
     }
     
     .face{
@@ -185,6 +199,7 @@ p{
         font-family: 'Cabin Sketch', cursive;
         padding: 30px;
         text-align: center;
+        
     }
 }
 
